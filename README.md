@@ -12,4 +12,4 @@ emm . and finish tha🙏nks for reading and sorry if i had fals dictation🤦..
 میخوننش 
 اگه میشه کممممککککککککک😅✋😗
 تامام
-@arshiiaa
+@arshiiyaa
