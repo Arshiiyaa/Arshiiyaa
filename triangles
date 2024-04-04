@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+/*
+
+triangles funcation!
+
+*/
+int  triangles(int first,int second,int third)
+{
+  printf("\tplease enter the first side :  ");
+  scanf("\t%d",&first);
+  
+  printf("\tsecond side :  ");
+  scanf("%d",&second);
+  
+  printf("\tand thirs side :  ");
+  scanf("%d",&third);
+  
+ 	if(((first*first)+(second*second)==(third*third))||((second*second)+(third*third)==(first*first))||((first*first)+(third*third)==(second*second)))
+ 	{
+	    printf("\t•this is a phythagoras triangle");
+ 	}
+ 	else if ((first==second)&&(first==third)&&(second==third))
+ 	{
+ 	    printf("\t•this is a Equilateral triangle");
+ 	}
+ 	else if ((first==second!=third)&&(first==third!=second)&&(second==third!=first))
+ 	{
+ 	    printf("\t•this is a Isosceles triangle");
+ 	}
+else 
+{
+    printf("\t•it doesnt have name");
+}
+
+//main funcation
+
+}
+int main()
+{
+    int first_side,second_side,third_side;
+    
+    printf("%d",triangles(first_side,second_side,third_side));
+}
