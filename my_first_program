@@ -1,0 +1,286 @@
+#include<stdio.h>
+#include<math.h>
+//enviroment of traingle
+int trg(int a,int b,int c)
+{
+   printf("\tplease enyer first side of traingle : ");
+   scanf("\t%d",&a);
+   
+   printf("\tsecond side : ");
+   scanf("%d",&b);
+   
+   printf("\tthird side : ");
+   scanf("%d",&c);
+   
+   printf("\n\tenviroment of your traingle is : %d+%d+%d=%d\n",a,b,c,a+b+c);
+   
+}
+//enviroment of rectangle
+int rct(int a,int b)
+{
+    
+    printf("\n\tplease enter one width of the rectangle : ");
+    scanf("%d",&a);
+    
+    printf("\tenter one longth of rectangle : ");
+    scanf("%d",&b);
+    
+    printf("\tenviroment of your rectangle is : (%d×2)+(%d×2)=%d\n",a,b,(a*2)+(b*2));
+    
+}
+
+//enviroment of square funcation
+int sqr1(int a)
+{
+  printf("\tplease enter one side of square : ");
+    scanf("%d",&a);
+    printf("\tenviroment of your square is  : 4×%d=%d\n",a,4*a);
+}
+
+//  area of traingle funcation!
+
+int traingle_area(int rule, int hight,int a)
+{
+    
+    printf("\n\tplease enter rule(قاعده) of traingle : ");
+    scanf("%d",&rule);
+    printf("\n\tplease enter hight of traingle : ");
+    scanf("%d",&hight);
+   
+     a=rule*hight/2;
+    
+    printf("\n\tarea of your traingle is : (%d × %d)÷2 = %d\n",rule,hight,a);
+    
+}
+
+//area of rectangle funcation!
+int rectangle(int width,int length,int a)
+{
+    printf("\tplease enter width of rectangle : ");
+    scanf("%d",&width);
+    
+    printf("\tplease enter length of rectangle : ");
+    scanf("%d",&length);
+    
+    a=width*length;
+    
+    printf("\n\tarea of your rectangle is : %d×%d=%d \n",width,length,a);
+    return 0;
+}
+
+/*
+
+area of square funcation!
+
+*/
+int square(int a)
+{
+    printf("\tplease enter one side of square : ");
+    scanf("%d",&a);
+    printf("\n\tarea of your square is : %d*%d=%d\n",a,a,a*a);
+}
+
+/*
+
+triangles funcation!
+
+*/
+int  triangles(int first,int second,int third)
+{
+  printf("\tplease enter the first side :  ");
+  scanf("\t%d",&first);
+  
+  printf("\tsecond side :  ");
+  scanf("%d",&second);
+  
+  printf("\tand thirs side :  ");
+  scanf("%d",&third);
+  //
+  if((first+second<third)||(first+third<second)||(second+third<first))
+  {
+      printf("\t×this is not a triangle!!×\n");
+      }
+      //
+      else {
+ 	if(((first*first)+(second*second)==(third*third))||((second*second)+(third*third)==(first*first))||((first*first)+(third*third)==(second*second)))
+ 	{
+	    printf("\n\t•this is a phythagoras(قائم الزاویه) triangle\n");
+ 	}
+ 	 else if((first==second)&&(first==third)&&(second==third))
+ 	{
+ 	    printf("\n\t•this is a Equilateral(متوازی الا ضلاع)\ttriangle\n");
+ 	}
+    else if((first==second&&first!=third)||(first==third&&first!=second)||(second==third&&second!=first))
+ 	{
+ 	    printf("\t•this is a Isosceles(متوازی الثاقین) triangle\n");
+ 	}
+else 
+{
+    printf("\t•it doesnt have name\n");
+}
+}
+}
+/*
+
+main funcation!
+
+*/
+
+int main()
+{
+    //tabe
+    int main;
+    
+    //
+    
+    printf("\n\t •triangles(مثلث ها) :  1 \n\t •identities(اتحاد ها):  2\n\t •areas (مساحت ها)  :  3 \n\t •enviroment(محیط‌ها):  4\n");
+    scanf("%d",&main);
+    
+    if (main==1)
+    {
+        
+    /*
+    triangles
+    */
+    int q1,q2,q3;
+    printf("%d",triangles(q1,q2,q3));
+    
+    }
+		/*
+		
+		etehad
+			
+	*/
+	if(main==2)
+	{
+	//tabe
+	int etehad;
+	//
+	printf("\t•etehad moraba do jomle  :  1\n\t•etehad mozdavej  :  2\n\t•etehad yek jomle moshtarak  :  3\n");
+	scanf("%d",&etehad);
+	//etehad moraba do jomle
+	    if (etehad==1)
+	{
+	    //tabe
+	    int sentence1,sentence2;
+	    int f,t,v,w;
+	    //
+	    printf("   •first sentence: ");
+	    scanf("%d",&sentence1);
+	    
+	    printf("   •second sentence: ");
+	    scanf("%d",&sentence2);
+
+
+	    f=sentence1*sentence1;
+	    t=2*sentence1*sentence2;
+	    v=sentence2*sentence2;
+	    w=f+t+v;
+	    printf("\t(%d×%d)+(2×%d×%d)+(%d×%d)\n\t%d+%d+%d=%d",sentence1,sentence1,sentence1,sentence2,sentence2,sentence2,f,t,v,w);
+	}
+	
+	//etehad mozdavej
+	
+	if(etehad==2)
+	{
+	    //tabe
+	    int a1,a2,b1,b2,w2;
+	    //
+	    printf("\tfirst sentence:   ");
+	    scanf("%d",&a1);
+	    printf("\tsecond sentence:    ");
+	    scanf("%d",&a2);
+	    
+	    b1=a1*a1;
+	    b2=-a2*a2;
+	    w2=b1+b2;
+	    printf("\t%d%d=%d",b1,b2,w2);
+	    
+	}
+	
+	//etehad yek jomle moshtarak
+	
+	if (etehad==3)
+	{
+	    //tabe
+	    int c1,c2,c3,d1,d2,d3,w2;
+	    //
+	    printf("\tfirst sentence(جمله ی مشترک):    ");
+	    scanf("%d",&c1);
+	    printf("\tsecond sentence:    ");
+	    scanf("%d",&c2);
+	    printf("\tthird sentence:    ");
+	    scanf("%d",&c3);
+	    //
+	    d1=c1*c1;
+	    d2=c1*(c2+c3);
+	    d3=c2*c3;
+	    w2=d1+d2+d3;
+	    //
+	    printf("\n\t(%d×%d)+(%d(%d+(%d))×(%d×%d)\n\t%d+(%d)+(%d)=%d",c1,c1,c1,c2,c3,c2,c3,d1,d2,d3,w2);
+	}
+	}
+	/*
+	
+	area
+	
+	*/
+	if (main==3)
+	{
+	    int area;
+	    printf("\n\n\tsquare : 1\n\ttraingle : 2 \n\trectangle : 3\n");
+	    scanf("%d",&area);
+	    
+	    //square->area
+	    if(area==1)
+	    {
+	      int n1;
+	      printf("\t%d",square(n1));
+	    }
+	    
+	      //traingle->area
+	      if (area==2)
+	      {
+	          int k1,k2,k3;
+	          printf("%d",traingle_area(k1,k2,k3));
+	      }
+	      
+	      //rectangle->area
+	      if (area==3)
+	      {
+	          int a4,a5,a6;
+	          printf("%d",rectangle(a4,a5,a6));
+	      }
+	}
+	/*
+	
+	enviroment
+	
+	*/
+	if (main==4)
+	{
+	    int env;
+	    
+	    printf("\t•square : 1\n\t•rectangle : 2\n\t•traingle : 3\n");
+	    scanf("%d",&env);
+	    
+	    //square=>enviroment
+	    if (env==1)
+	    {
+	        int ev;
+	        printf("%d",sqr1(ev));
+	    }
+	 //   rectangle=>enviroment
+	    else if (env==2)
+	    {
+	        int o,p;
+	        printf("%d",rct(o,p));
+	    }
+	    else if (env==3)
+	    {
+	     int a,b,c ;
+	     printf("%d",trg(a,b,c));
+	    }   
+	}
+	return 0;
+}
